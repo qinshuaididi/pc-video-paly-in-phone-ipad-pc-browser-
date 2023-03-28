@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        img {
+            width: auto;
+            height: 100vh;
+        }
+    </style>
+</head>
+<body>
+<img th:src="@{|/image?path=${p}|}" alt="your-image">
+</body>
+</html>

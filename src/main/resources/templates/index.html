@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head >
+  <meta charset="UTF-8">
+  <title>Title</title>
+
+  <script type="text/javascript" th:src="@{/jquery.js}"></script>
+  <link type="text/css" rel="stylesheet" th:href="@{/list.css}">
+</head>
+<body style="background-color: rgba(204,204,204,0.23)">
+
+
+<div class="fav_list">
+  <div data-v-357a65ed="" class="fav_list_box">
+    <div  class="fav_list_title">
+      <h3 class="fav_list_title_h3">目录<i th:text="${path}"></i></h3>
+    </div>
+    <div  class="my_fav_con">
+      <div>
+        <ul  class="my_fav_list">
+          <li class="my_fav_list_li" id=""  th:each="map:${list}">
+            <a  class="my_fav_list_a" th:href="@{|?path=${path}${map.name}/|}"  th:text="${map.name}">
+              （电脑故障）2.电脑突然就找不到网络，上不了网 - qq_38959715的博客
+            </a>
+            <label class="my_fav_list_label">
+              <a th:if="${map.type=='file'}" th:href="@{|/media?path=${path}${map.name}|}">see  </a>  <i  th:text="${map.type}">取消</i>
+            </label>
+          </li>
+        </ul> <!---->
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
+
+
